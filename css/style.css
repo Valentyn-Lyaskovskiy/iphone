@@ -65,6 +65,7 @@ body{
   padding: 71px 0 40px;
   background: #F5F5F7;
   text-align: center;
+  /* min-height: calc(100vh-113px); */
 }
 
 .main__title:not(:last-child){
