@@ -59,6 +59,10 @@ body{
   flex-basis: 0;
 }
 
+.menu-btn{
+  display: none;
+}
+
 .phone{
   flex-grow: 1;
   flex-basis: 0;
@@ -212,6 +216,7 @@ body{
   color: #490E84;
   text-transform: uppercase;
   align-self: center;
+  border: 0;
 }
 
 .contacts__form p{
@@ -228,6 +233,97 @@ body{
 }
 
 /*   @Media     */
+
+@media (max-width: 1290px){
+  .menu-btn{
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: 0;
+    order: 1;
+    z-index: 2;
+    margin-right: 5px;
+  }
+
+  .menu-line:nth-child(1){
+    top: 0;
+  }
+  .menu-line:nth-child(2){
+    top: 15px;
+  }
+  .menu-line:nth-child(3){
+    top: 15px;
+  }
+  .menu-line:nth-child(4){
+    top: 30px;
+  }
+
+  .burger .menu-line:nth-child(1){
+    transform: scale(0);
+  }
+
+  .burger .menu-line:nth-child(2){
+    transform: rotate(45deg);
+  }
+
+  .burger .menu-line:nth-child(3){
+    transform: rotate(-45deg);
+  }
+
+  .burger .menu-line:nth-child(4){
+    transform: scale(0);
+  }
+
+  .menu-line{
+    position: absolute;
+    background-color:#fff;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    transition: all .8s ease;
+  }
+  
+  .header__menu{
+    position: absolute;
+    /* width: 100%;  Another option  */
+    /* height: 100%;  */
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #490E84;
+    font-size: 30px;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    transform: translateX(-100%);
+    transition: all .8s ease;
+  }
+ 
+  .burger .header__menu{
+    transform: translateX(0);
+  }
+
+  /* .menu__item{
+    margin-right: 0;
+  }  if not last-child is used, it doesn't apply*/
+
+  .menu__item:not(:last-child){
+    margin: 0 0 24px 0;
+  }
+  
+  .logo,
+  .phone{
+    position: relative;
+    z-index: 2;
+  }
+
+  .phone{
+    text-align: center;
+  }
+}
 
 @media (max-width: 1210px){
   .main__img{
@@ -263,6 +359,10 @@ body{
     flex-direction: column;
   }
 
+  .contacts__form h2{
+    text-align: center;
+  }
+
   .contacts__form{
     padding: 110px 70px;
   }
@@ -286,6 +386,21 @@ body{
     width: 100%;
   }
 
+  .color__item img{
+    width: 100%;
+  }
+
+  .footer__nav{
+    flex-direction: column;
+  }
+
+  .footer__nav .logo{
+    margin: 25px 25px; 
+  }
+
+  .phone{
+    padding-bottom: 15px;
+  }
 }
 
 @media (max-width: 375px){
@@ -300,7 +415,14 @@ body{
   }
 
   .contacts__form{
-    padding: 70px 40px;
+    padding: 70px 10px;
   }
 
+  .new-section{
+    padding: 60px 0 100px;
+  }
+
+  .color{
+    padding: 0 0 100px;
+  }
 }
