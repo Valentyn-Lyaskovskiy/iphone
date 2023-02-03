@@ -55,8 +55,7 @@ body{
 
 .menu{
   display: flex;
-  flex-grow: 1;
-  flex-basis: 0;
+  flex-basis: auto;
 }
 
 .menu-btn{
@@ -64,8 +63,7 @@ body{
 }
 
 .phone{
-  flex-grow: 1;
-  flex-basis: 0;
+  flex-basis: auto;
   text-align: right;
 }
 
@@ -238,8 +236,8 @@ body{
   .menu-btn{
     position: relative;
     display: inline-block;
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     background: transparent;
     border: 0;
     order: 1;
@@ -280,8 +278,9 @@ body{
     position: absolute;
     background-color:#fff;
     height: 2px;
-    width: 100%;
+    /* width: 100%; */
     left: 0;
+    right: 0;
     transition: all .8s ease;
   }
   
